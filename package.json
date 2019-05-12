@@ -1,5 +1,5 @@
 {
-  "name": "@daintree/jbootstrap",
+  "name": "@daintree-dev/jbootstrap",
   "version": "0.0.1",
   "description": "A javascript module for creation of bootstrap components",
   "main": "dist/index.js",
@@ -8,7 +8,10 @@
     "prepublishOnly": "npm run build",
     "lint": "tslint --project tsconfig.json",
     "build": "webpack",
-    "test": "jest --env=jsdom"
+    "test": "jest --env=jsdom",
+    "test-watch": "jest --env=jsdom --watchAll",
+    "test-coverage": "jest --env=jsdom --coverage",
+    "test-full": "jest --env=jsdom --watchAll --coverage"
   },
   "repository": {
     "type": "git",
@@ -26,9 +29,7 @@
   "homepage": "https://github.com/tcatovic/-daintree-jbootstrap#readme",
   "devDependencies": {
     "@types/jest": "^24.0.12",
-    "@types/jsdom": "^12.2.3",
     "jest": "^24.8.0",
-    "jsdom": "^15.0.0",
     "source-map-loader": "^0.2.4",
     "ts-jest": "^24.0.2",
     "ts-loader": "^6.0.0",

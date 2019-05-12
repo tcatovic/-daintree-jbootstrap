@@ -1,3 +1,4 @@
+import "jest";
 import { Alert } from "./alert";
 
 beforeAll(() => {
