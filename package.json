@@ -1,0 +1,39 @@
+{
+  "name": "@daintree/jbootstrap",
+  "version": "0.0.1",
+  "description": "A javascript module for creation of bootstrap components",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "lint": "tslint --project tsconfig.json",
+    "build": "webpack",
+    "pretest": "npm run lint",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcatovic/-daintree-jbootstrap.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "javascript"
+  ],
+  "author": "Tarik Catovic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tcatovic/-daintree-jbootstrap/issues"
+  },
+  "homepage": "https://github.com/tcatovic/-daintree-jbootstrap#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.12",
+    "jest": "^24.8.0",
+    "source-map-loader": "^0.2.4",
+    "ts-jest": "^24.0.2",
+    "ts-loader": "^6.0.0",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.5",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  }
+}
