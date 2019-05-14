@@ -7,7 +7,7 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "lint": "tslint --project tsconfig.json",
-    "build": "webpack",
+    "build": "tsc",
     "test": "jest --env=jsdom",
     "test-watch": "jest --env=jsdom --watchAll",
     "test-coverage": "jest --env=jsdom --coverage",

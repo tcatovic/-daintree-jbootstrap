@@ -3,6 +3,3 @@ node_modules/
 
 # Jest Code Coverage
 coverage/
-
-# build file
-dist/
