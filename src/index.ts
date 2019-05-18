@@ -4,4 +4,4 @@
  * Container for all jbootstrap components
  */
 
-export * from "./modules/alert";
+export * from "./modules/alert/alert";
