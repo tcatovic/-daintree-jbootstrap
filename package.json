@@ -8,10 +8,8 @@
     "prepublishOnly": "npm run build",
     "lint": "tslint --project tsconfig.json",
     "build": "tsc",
-    "test": "jest --env=jsdom",
-    "test-watch": "jest --env=jsdom --watchAll",
-    "test-coverage": "jest --env=jsdom --coverage",
-    "test-full": "jest --env=jsdom --watchAll --coverage"
+    "test": "jest --env=jsdom --watchAll --coverage",
+    "test-coverage-report": "httpserver ./coverage/lcov-report"
   },
   "repository": {
     "type": "git",
