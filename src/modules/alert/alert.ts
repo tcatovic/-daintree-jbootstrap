@@ -3,10 +3,15 @@ export class Alert {
   public options: IAlertOptions;
   public element: HTMLDivElement;
 
-  private parent: Element;
+  private defaultOptions = {
+    className: "",
+    content: "An error has occured",
+    dismissable: true,
+    type: "danger",
+  };
 
   constructor(selector: string, options: IAlertOptions) {
-    this.options = options;
+    this.options = Object.assign({}, this.defaultOptions, options);
     this.element = document.createElement("div");
 
     const parent = document.querySelector(selector);
@@ -15,16 +20,14 @@ export class Alert {
       throw new Error(`An element with the selector ${selector} does not exist`);
     }
 
-    this.parent = parent;
-
-    this.build();
+    this.build(parent);
   }
 
   public close() {
     this.element.remove();
   }
 
-  protected build() {
+  protected build(parent: Element) {
     const fragment = document.createDocumentFragment();
 
     const classNames = Array.isArray(this.options.className) ?
@@ -44,7 +47,7 @@ export class Alert {
     }
 
     fragment.appendChild(this.element);
-    this.parent.appendChild(fragment);
+    parent.appendChild(fragment);
   }
 
   private buildCloseButton() {
